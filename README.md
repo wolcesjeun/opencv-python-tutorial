@@ -26,7 +26,7 @@ ve izleme için gözetim sistemlerinde, nesne manipülasyonu ve navigasyon
 için robotikte ve kullanıcı deneyimlerini geliştirmek için artırılmış
 gerçeklik ve sanal gerçeklik gibi alanlarda kullanılır.
 
-### OpenCv Kütüphanesi Kullanımı
+## OpenCv Kütüphanesi Kullanımı
 
 OpenCV (Open Source Computer Vision Library), öncelikle gerçek zamanlı
 bilgisayarla görmeyi amaçlayan açık kaynaklı bir kütüphanedir. Görüntü
