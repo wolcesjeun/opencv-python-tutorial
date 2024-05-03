@@ -59,7 +59,6 @@ bir OpenCV programı yazacağız.
 
 ```
 pip install opencv-python
-pip install numpy
 ```
 
 
@@ -69,7 +68,6 @@ pip install numpy
 
 ``` python
 import cv2
-import numpy as np
 ```
 
 
