@@ -44,7 +44,7 @@ görüntü işleme adımlarından olan görünüyü basitçe manipüle etmek gib
 basit işlemleri inceleyeceğiz. Ardından, bu işlevleri kullanarak küçük
 bir OpenCV programı yazacağız.
 
-<b>{=html}Sırasıyla aşağıdaki adımları izleyeceğiz:</b>
+<b>Sırasıyla aşağıdaki adımları izleyeceğiz:</b>
 
 1.  Kullanacağımız kütüphaneleri içeri aktarma.
 2.  Bir resimi okuma fonksiyonu oluşturma.
@@ -55,28 +55,27 @@ bir OpenCV programı yazacağız.
 7.  Programımızın algoritmasına uygun kod yapısını oluşturma.
 
 
-### 0- Kütüphanenin kurulumu {#0--kütüphanenin-kurulumu}
+### 0- Kütüphanenin kurulumu 
 
 
 pip install opencv-python pip install numpy
 
 
 
-### 1 - Kullanacağımız kütüphaneleri içeri aktarma. {#1---kullanacağımız-kütüphaneleri-içeri-aktarma}
+### 1 - Kullanacağımız kütüphaneleri içeri aktarma.
 
 
-::: {#16af5290-9980-42ea-86f9-c4266926ae24 .cell .code execution_count="11"}
+
 ``` python
 import cv2
 import numpy as np
 ```
-:::
 
-::: {#474f1e1f-1f51-4097-b13b-2997d2f13464 .cell .markdown}
-### 2 - Bir resimi okuma fonksiyonu oluşturma. {#2---bir-resimi-okuma-fonksiyonu-oluşturma}
-:::
 
-::: {#3be2c9b7-6708-4de3-9ab5-215ce741fef0 .cell .code execution_count="36"}
+### 2 - Bir resimi okuma fonksiyonu oluşturma.
+
+
+
 ``` python
 def read_image(image_path):
   """
@@ -91,13 +90,13 @@ def read_image(image_path):
   image = cv2.imread(image_path)
   return cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 ```
-:::
 
-::: {#1384bf1c-b05d-4ff2-a44b-0740b99eba31 .cell .markdown}
-### 3 - Bir resimi gri tonlamaya dönüştürme fonksiyonunu oluşturma. {#3---bir-resimi-gri-tonlamaya-dönüştürme-fonksiyonunu-oluşturma}
-:::
 
-::: {#b265a851-406a-49c5-af2f-3e8cfaf6087f .cell .code execution_count="35"}
+
+### 3 - Bir resimi gri tonlamaya dönüştürme fonksiyonunu oluşturma.
+
+
+
 ``` python
 def grayscale(image):
   """
@@ -111,13 +110,13 @@ def grayscale(image):
   """
   return cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
 ```
-:::
 
-::: {#038b2cde .cell .markdown}
-### 4 - Bir resimi gauss bulanıklaştırma yöntemiyle bulanıklaştırma fonksiyonu oluşturma. {#4---bir-resimi-gauss-bulanıklaştırma-yöntemiyle-bulanıklaştırma-fonksiyonu-oluşturma}
-:::
 
-::: {#1f8e4f00-3502-461b-aadf-2b4f2b72b9d7 .cell .code execution_count="34"}
+
+### 4 - Bir resimi gauss bulanıklaştırma yöntemiyle bulanıklaştırma fonksiyonu oluşturma. 
+
+
+
 ``` python
 def blur(image, kernel_size=(3, 3)):
   """
@@ -132,13 +131,13 @@ def blur(image, kernel_size=(3, 3)):
   """
   return cv2.GaussianBlur(image, kernel_size, 0)
 ```
-:::
 
-::: {#3cd42710 .cell .markdown}
-### 5 - Bir resimde kenar algılama fonksiyonu oluşturma. {#5---bir-resimde-kenar-algılama-fonksiyonu-oluşturma}
-:::
 
-::: {#bd78a0e9 .cell .code execution_count="55"}
+
+### 5 - Bir resimde kenar algılama fonksiyonu oluşturma.
+
+
+
 ``` python
 def edges(image):
   """
@@ -152,13 +151,12 @@ def edges(image):
   """
   return cv2.Canny(image, 10, 40)
 ```
-:::
 
-::: {#204221e8 .cell .markdown}
-### 6 - Resimi pencerede görüntüleme fonksiyonu oluşturma. {#6---resimi-pencerede-görüntüleme-fonksiyonu-oluşturma}
-:::
 
-::: {#2c198e8a .cell .code execution_count="33"}
+### 6 - Resimi pencerede görüntüleme fonksiyonu oluşturma.
+
+
+
 ``` python
 def show_image(image, title="Resim"):
   """
@@ -172,13 +170,13 @@ def show_image(image, title="Resim"):
   cv2.waitKey(0)
   cv2.destroyAllWindows()
 ```
-:::
 
-::: {#e580219d .cell .markdown}
-### 7 - Programımızın algoritmasına uygun kod yapısını oluşturma. {#7---programımızın-algoritmasına-uygun-kod-yapısını-oluşturma}
-:::
 
-::: {#343de40a .cell .code execution_count="58"}
+
+### 7 - Programımızın algoritmasına uygun kod yapısını oluşturma.
+
+
+
 ``` python
 # Bir resim oku
 image = read_image("kum-tepesi.jpg")
@@ -198,4 +196,3 @@ show_image(gray_image, "Gri Tonlamalı")
 show_image(blurred_image, "Bulanıklaştırılmış")
 show_image(edges_image, "Kenarlar")
 ```
-:::
