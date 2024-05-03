@@ -25,9 +25,7 @@ hizmetleri, nesne algılama ve navigasyon için otonom araçlarda, güvenlik
 ve izleme için gözetim sistemlerinde, nesne manipülasyonu ve navigasyon
 için robotikte ve kullanıcı deneyimlerini geliştirmek için artırılmış
 gerçeklik ve sanal gerçeklik gibi alanlarda kullanılır.
-:::
 
-::: {#ebfa1415-77ef-4991-9a36-5cfa1cb92932 .cell .markdown}
 ### OpenCv Kütüphanesi Kullanımı
 
 OpenCV (Open Source Computer Vision Library), öncelikle gerçek zamanlı
@@ -46,29 +44,26 @@ görüntü işleme adımlarından olan görünüyü basitçe manipüle etmek gib
 basit işlemleri inceleyeceğiz. Ardından, bu işlevleri kullanarak küçük
 bir OpenCV programı yazacağız.
 
-`<b>`{=html}Sırasıyla aşağıdaki adımları izleyeceğiz:`</b>`{=html}
+<b>{=html}Sırasıyla aşağıdaki adımları izleyeceğiz:</b>
 
 1.  Kullanacağımız kütüphaneleri içeri aktarma.
 2.  Bir resimi okuma fonksiyonu oluşturma.
 3.  Bir resimi gri tonlamaya dönüştürme fonksiyonunu oluşturma.
-4.  Bir resimi gauss bulanıklaştırma yöntemiyle bulanıklaştırma
-    fonksiyonu oluşturma.
+4.  Bir resimi gauss bulanıklaştırma yöntemiyle bulanıklaştırma fonksiyonu oluşturma.
 5.  Bir resimde kenar algılama fonksiyonu oluşturma.
 6.  Resimi pencerede görüntüleme fonksiyonu oluşturma.
 7.  Programımızın algoritmasına uygun kod yapısını oluşturma.
-:::
 
-::: {#bf8597a7-af19-4875-9ea5-9fb77b63b804 .cell .markdown}
+
 ### 0- Kütüphanenin kurulumu {#0--kütüphanenin-kurulumu}
-:::
 
-::: {#e8300d50-497c-42e1-ac2b-cc458bffa579 .cell .markdown vscode="{\"languageId\":\"bat\"}"}
+
 pip install opencv-python pip install numpy
-:::
 
-::: {#3a012d5b-7d9d-4b64-82fd-0539628cd9ab .cell .markdown}
+
+
 ### 1 - Kullanacağımız kütüphaneleri içeri aktarma. {#1---kullanacağımız-kütüphaneleri-içeri-aktarma}
-:::
+
 
 ::: {#16af5290-9980-42ea-86f9-c4266926ae24 .cell .code execution_count="11"}
 ``` python
