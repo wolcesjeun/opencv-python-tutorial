@@ -57,9 +57,10 @@ bir OpenCV programı yazacağız.
 
 ### 0- Kütüphanenin kurulumu 
 
-
-pip install opencv-python pip install numpy
-
+```
+pip install opencv-python
+pip install numpy
+```
 
 
 ### 1 - Kullanacağımız kütüphaneleri içeri aktarma.
